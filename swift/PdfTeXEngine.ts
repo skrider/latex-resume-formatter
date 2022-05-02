@@ -105,7 +105,7 @@ export class PdfTeXEngine {
   public async compileFormat(): Promise<void> {
     this.checkEngineStatus();
     this.latexWorkerStatus = EngineStatus.Busy;
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       this.latexWorker!.onmessage = (ev: any) => {
         const data: any = ev["data"];
         const cmd: string = data["cmd"] as string;
