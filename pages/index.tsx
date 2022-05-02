@@ -1,33 +1,46 @@
-import { Box, Input } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
+import { Box, Input, Text, Textarea } from "@chakra-ui/react";
+import { useState, useEffect, useCallback } from "react";
 import type { NextPage } from "next";
+import debounce from "lodash.debounce";
+import { PdfTeXEngine } from "../swift/PdfTeXEngine";
 
 const Home: NextPage = () => {
   const [pdf, setPdf] = useState<any>(null);
-  const [content, setContent] = useState<string>("");
+  const [content, setContent] = useState<string>("type some \\LaTeX");
+  let [engine, setEngine] = useState<PdfTeXEngine | null>(null);
+
+  const renderPdf = useCallback(
+    debounce((arg_content: string) => {
+      if (engine) {
+        (async () => {
+          engine.writeMemFSFile(
+            "main.tex",
+            `\\documentclass{article}
+\\begin{document}
+${arg_content}
+\\end{document}
+`
+          );
+          const result = await engine.compileLaTeX();
+          if (result.pdf) {
+            setPdf(Buffer.from(result.pdf));
+          }
+        })();
+      }
+    }, 400),
+    [engine]
+  );
+
   useEffect(() => {
     (async () => {
       try {
         const { PdfTeXEngine } = await import("../swift/PdfTeXEngine");
-        const engine = new PdfTeXEngine();
-        console.log(engine);
+        engine = new PdfTeXEngine();
         await engine.loadEngine();
-        console.log(engine);
-        engine.writeMemFSFile(
-          "main.tex",
-          `
-\\documentclass{article}
-\\begin{document}
-  hello from swift
-\\end{document}
-`
-        );
         engine.setEngineMainFile("main.tex");
-        let res = await engine.compileLaTeX();
-        console.log("pdf generated");
-        console.log(res);
-        const b64 = Buffer.from(res.pdf as Uint8Array);
-        setPdf(b64);
+        // sorta fucked state etiquette here
+        setEngine(engine);
+        renderPdf(content);
       } catch (e: any) {
         console.error(e);
       }
@@ -38,7 +51,7 @@ const Home: NextPage = () => {
     <Box
       height="100vh"
       width="100vw"
-      bg="green"
+      bg="gray.50"
       display="grid"
       gridTemplateColumns="1fr 1fr"
       __css={{
@@ -49,10 +62,19 @@ const Home: NextPage = () => {
         },
       }}
     >
-      <Input
-        onChange={(event) => setContent(event.target.value)}
-        value={content}
-      />
+      <Box width="100%" padding="2rem">
+        <Text fontSize="18px" color="black" mb="0.5rem">
+          Write something:
+        </Text>
+        <Textarea
+          bg="white"
+          onChange={(event) => {
+            setContent(event.target.value);
+            renderPdf(event.target.value);
+          }}
+          value={content}
+        />
+      </Box>
       {pdf ? (
         <embed src={`data:application/pdf;base64,${pdf.toString("base64")}`} />
       ) : (
