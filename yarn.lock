@@ -1378,6 +1378,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash.debounce@npm:^4.0.7":
+  version: 4.0.7
+  resolution: "@types/lodash.debounce@npm:4.0.7"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: e873b2d77f89010876baba3437ef826b17221b98948e00b5590828334a481dea1c8f9d28543210e564adc53199584f42c3cb171f8b6c3614fefc0b4e0888679c
+  languageName: node
+  linkType: hard
+
 "@types/lodash.mergewith@npm:4.6.6":
   version: 4.6.6
   resolution: "@types/lodash.mergewith@npm:4.6.6"
@@ -3290,6 +3299,7 @@ __metadata:
     "@chakra-ui/react": ^1.8.8
     "@emotion/react": ^11
     "@emotion/styled": ^11
+    "@types/lodash.debounce": ^4.0.7
     "@types/node": 17.0.31
     "@types/react": 18.0.8
     "@types/react-dom": 18.0.3
@@ -3297,6 +3307,7 @@ __metadata:
     eslint: 8.14.0
     eslint-config-next: 12.1.5
     framer-motion: ^6
+    lodash.debounce: ^4.0.8
     next: 12.1.5
     prettier: ^2.6.2
     react: 18.1.0
@@ -3329,6 +3340,13 @@ __metadata:
     p-locate: ^2.0.0
     path-exists: ^3.0.0
   checksum: 02d581edbbbb0fa292e28d96b7de36b5b62c2fa8b5a7e82638ebb33afa74284acf022d3b1e9ae10e3ffb7658fbc49163fcd5e76e7d1baaa7801c3e05a81da755
+  languageName: node
+  linkType: hard
+
+"lodash.debounce@npm:^4.0.8":
+  version: 4.0.8
+  resolution: "lodash.debounce@npm:4.0.8"
+  checksum: a3f527d22c548f43ae31c861ada88b2637eb48ac6aa3eb56e82d44917971b8aa96fbb37aa60efea674dc4ee8c42074f90f7b1f772e9db375435f6c83a19b3bc6
   languageName: node
   linkType: hard
 

@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@chakra-ui/react", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:1.8.8"],\
             ["@emotion/react", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:11.9.0"],\
             ["@emotion/styled", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:11.8.1"],\
+            ["@types/lodash.debounce", "npm:4.0.7"],\
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:18.0.8"],\
             ["@types/react-dom", "npm:18.0.3"],\
@@ -43,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.14.0"],\
             ["eslint-config-next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
             ["framer-motion", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.3.3"],\
+            ["lodash.debounce", "npm:4.0.8"],\
             ["next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
             ["prettier", "npm:2.6.2"],\
             ["react", "npm:18.1.0"],\
@@ -2439,6 +2441,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/lodash.debounce", [\
+        ["npm:4.0.7", {\
+          "packageLocation": "./.yarn/cache/@types-lodash.debounce-npm-4.0.7-efe92bf273-e873b2d77f.zip/node_modules/@types/lodash.debounce/",\
+          "packageDependencies": [\
+            ["@types/lodash.debounce", "npm:4.0.7"],\
+            ["@types/lodash", "npm:4.14.182"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/lodash.mergewith", [\
         ["npm:4.6.6", {\
           "packageLocation": "./.yarn/cache/@types-lodash.mergewith-npm-4.6.6-bfa2ee5d9a-d57d040467.zip/node_modules/@types/lodash.mergewith/",\
@@ -4765,6 +4777,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@chakra-ui/react", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:1.8.8"],\
             ["@emotion/react", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:11.9.0"],\
             ["@emotion/styled", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:11.8.1"],\
+            ["@types/lodash.debounce", "npm:4.0.7"],\
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:18.0.8"],\
             ["@types/react-dom", "npm:18.0.3"],\
@@ -4772,6 +4785,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.14.0"],\
             ["eslint-config-next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
             ["framer-motion", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.3.3"],\
+            ["lodash.debounce", "npm:4.0.8"],\
             ["next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
             ["prettier", "npm:2.6.2"],\
             ["react", "npm:18.1.0"],\
@@ -4817,6 +4831,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
           "packageDependencies": [\
             ["lodash", "npm:4.17.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash.debounce", [\
+        ["npm:4.0.8", {\
+          "packageLocation": "./.yarn/cache/lodash.debounce-npm-4.0.8-f1d6e09799-a3f527d22c.zip/node_modules/lodash.debounce/",\
+          "packageDependencies": [\
+            ["lodash.debounce", "npm:4.0.8"]\
           ],\
           "linkType": "HARD"\
         }]\
