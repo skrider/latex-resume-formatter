@@ -28,4 +28,4 @@ We commit node modules found in .yarn/cache, this is not a mistake.
 - Write the form for converting user input to the JSONResume schema using Redux and React-Final-Form
 - Transform said user input into .tex files
 - Add firebase authentication to save user resume data between sessions
-- (optional)
+- (optional) serve user resumes so that they can be sent around, analytics can be embedded, and they can be updated on the fly
