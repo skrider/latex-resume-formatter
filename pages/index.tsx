@@ -1,9 +1,8 @@
-import type { NextPage } from 'next'
+import { Box } from "@chakra-ui/react";
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return (
-    <div></div>
-  )
-}
+  return <Box color="black">Hello world</Box>;
+};
 
-export default Home
+export default Home;
