@@ -39,7 +39,7 @@ export class PdfTeXEngine {
       throw new Error("Other instance is running, abort()");
     }
     this.latexWorkerStatus = EngineStatus.Init;
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       this.latexWorker = new Worker(ENGINE_PATH);
       this.latexWorker.onmessage = (ev: any) => {
         const data: any = ev["data"];
