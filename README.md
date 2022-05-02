@@ -1,5 +1,7 @@
 # LaTeX MET Resume Formatter
 
+[try it out](https://latex-resume-formatter.vercel.app/)
+
 This is a WIP project for formatting resumes according to the MET standard template from a flexible form input to PDF files. It is a Next.js app running on Vercel that uses [pdfTeX](https://en.wikipedia.org/wiki/PdfTeX) compiled down to WebAssembly via [SwiftLaTeX](https://github.com/SwiftLaTeX/SwiftLaTeX).
 
 ## Development
