@@ -13,6 +13,7 @@ import type { NextPage } from "next";
 import debounce from "lodash.debounce";
 import { PdfTeXEngine } from "../swift/PdfTeXEngine";
 import { Field, Form } from "react-final-form";
+import AppInput from "../components/AppInput";
 
 const Home: NextPage = () => {
   const [pdf, setPdf] = useState<any>(null);
@@ -78,29 +79,16 @@ ${arg_content}
           <Box
             p="3"
             borderRadius="3"
-            display="grid"
-            gridAutoRows="auto"
+            display="flex"
+            flexDir="column"
             gridRowGap="3"
           >
-            <Field
-              name="content.name"
-              type="input"
-              render={({ input }) => <Input {...input} />}
-            />
-            <Field
-              name="content.phone_number"
-              type="input"
-              render={({ input }) => <Input {...input} />}
-            />
-            <Field
-              name="content.linkedin_url"
-              type="input"
-              render={({ input }) => <Input {...input} />}
-            />
-            <Field
+            <AppInput name="content.name" label="Student Name" />
+            <AppInput name="content.phone_number" label="Phone Number" />
+            <AppInput name="content.linkedin_url" label="Linkedin URL" />
+            <AppInput
               name="content.personal_website_url"
-              type="input"
-              render={({ input }) => <Input {...input} />}
+              label="Personal Website URL"
             />
             <Field
               name="meta.show_gpa"
@@ -141,10 +129,9 @@ ${arg_content}
                   <Checkbox {...input}>Show High School</Checkbox>
                   {input.checked && (
                     <>
-                      <Field
+                      <AppInput
                         name="content.high_school.name"
-                        type="input"
-                        render={({ input }) => <Input {...input} />}
+                        label="High School Name"
                       />
                     </>
                   )}
