@@ -12,7 +12,7 @@ import { useState, useEffect, useCallback } from "react";
 import type { NextPage } from "next";
 import debounce from "lodash.debounce";
 import { PdfTeXEngine } from "../swift/PdfTeXEngine";
-import { Field, Form } from "react-final-form";
+import { Field, Form, FormSpy } from "react-final-form";
 import AppInput from "../components/AppInput";
 import AppNumberInput from "../components/AppNumberInput";
 
@@ -84,6 +84,12 @@ ${arg_content}
             flexDir="column"
             gridRowGap="3"
           >
+            <FormSpy
+              subscription={{ values: true }}
+              onChange={({ values }) => {
+                renderPdf(Object.keys(values.content).length.toString());
+              }}
+            />
             <AppInput name="content.name" label="Student Name" />
             <AppInput name="content.phone_number" label="Phone Number" />
             <AppInput name="content.linkedin_url" label="Linkedin URL" />
