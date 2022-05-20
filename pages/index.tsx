@@ -14,6 +14,7 @@ import debounce from "lodash.debounce";
 import { PdfTeXEngine } from "../swift/PdfTeXEngine";
 import { Field, Form } from "react-final-form";
 import AppInput from "../components/AppInput";
+import AppNumberInput from "../components/AppNumberInput";
 
 const Home: NextPage = () => {
   const [pdf, setPdf] = useState<any>(null);
@@ -97,25 +98,14 @@ ${arg_content}
                 <>
                   <Checkbox {...input}>Show GPA</Checkbox>
                   {input.checked && (
-                    <Field
+                    <AppNumberInput
                       name="content.gpa"
-                      type="number"
-                      render={({ input }) => (
-                        <NumberInput
-                          {...input}
-                          precision={2}
-                          defaultValue={4.0}
-                          min={0}
-                          max={4}
-                          step={0.1}
-                        >
-                          <NumberInputField />
-                          <NumberInputStepper>
-                            <NumberIncrementStepper />
-                            <NumberDecrementStepper />
-                          </NumberInputStepper>
-                        </NumberInput>
-                      )}
+                      label="GPA"
+                      precision={2}
+                      defaultValue={4.0}
+                      min={0}
+                      max={4}
+                      step={0.1}
                     />
                   )}
                 </>
