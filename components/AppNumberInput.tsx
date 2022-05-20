@@ -35,7 +35,7 @@ const AppNumberInput: React.FC<AppNumberInputProps> = ({
       type="number"
       render={({ input }) => (
         <Box>
-          <Text>{label}</Text>
+          <Text textStyle="label">{label}</Text>
           <NumberInput
             {...input}
             name={name}

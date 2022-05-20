@@ -18,7 +18,7 @@ const AppInput: React.FC<AppInputProps> = ({ label, name, ...props }) => {
       type="input"
       render={({ input }) => (
         <Box {...props}>
-          <Text>{label}</Text>
+          <Text textStyle="label">{label}</Text>
           <Input {...input} />
         </Box>
       )}
