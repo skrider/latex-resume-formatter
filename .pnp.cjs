@@ -43,12 +43,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:3.0.0-rc.4"],\
             ["eslint", "npm:8.14.0"],\
             ["eslint-config-next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
+            ["final-form", "npm:4.20.7"],\
             ["framer-motion", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.3.3"],\
             ["lodash.debounce", "npm:4.0.8"],\
             ["next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
             ["prettier", "npm:2.6.2"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:18.1.0"],\
+            ["react-final-form", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.5.9"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
@@ -142,6 +144,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.17.9-c52a5e9d27-4d56bdb828.zip/node_modules/@babel/runtime/",\
           "packageDependencies": [\
             ["@babel/runtime", "npm:7.17.9"],\
+            ["regenerator-runtime", "npm:0.13.9"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.18.0", {\
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.18.0-6481a6d48c-9d0caa5fe6.zip/node_modules/@babel/runtime/",\
+          "packageDependencies": [\
+            ["@babel/runtime", "npm:7.18.0"],\
             ["regenerator-runtime", "npm:0.13.9"]\
           ],\
           "linkType": "HARD"\
@@ -4018,6 +4028,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["final-form", [\
+        ["npm:4.20.7", {\
+          "packageLocation": "./.yarn/cache/final-form-npm-4.20.7-a5cf5a1343-0e2a9a9cf7.zip/node_modules/final-form/",\
+          "packageDependencies": [\
+            ["final-form", "npm:4.20.7"],\
+            ["@babel/runtime", "npm:7.18.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["find-root", [\
         ["npm:1.1.0", {\
           "packageLocation": "./.yarn/cache/find-root-npm-1.1.0-a16a94005f-b2a59fe4b6.zip/node_modules/find-root/",\
@@ -4784,12 +4804,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:3.0.0-rc.4"],\
             ["eslint", "npm:8.14.0"],\
             ["eslint-config-next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
+            ["final-form", "npm:4.20.7"],\
             ["framer-motion", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.3.3"],\
             ["lodash.debounce", "npm:4.0.8"],\
             ["next", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:12.1.5"],\
             ["prettier", "npm:2.6.2"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:18.1.0"],\
+            ["react-final-form", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.5.9"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
@@ -5486,6 +5508,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-fast-compare-npm-3.2.0-fbfa6627d9-8ef272c825.zip/node_modules/react-fast-compare/",\
           "packageDependencies": [\
             ["react-fast-compare", "npm:3.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-final-form", [\
+        ["npm:6.5.9", {\
+          "packageLocation": "./.yarn/cache/react-final-form-npm-6.5.9-9c08f1bca4-2ab79b1b02.zip/node_modules/react-final-form/",\
+          "packageDependencies": [\
+            ["react-final-form", "npm:6.5.9"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.5.9", {\
+          "packageLocation": "./.yarn/__virtual__/react-final-form-virtual-8fd78dac8b/0/cache/react-final-form-npm-6.5.9-9c08f1bca4-2ab79b1b02.zip/node_modules/react-final-form/",\
+          "packageDependencies": [\
+            ["react-final-form", "virtual:f050d3d0b6f559457f984c49365edf7acc71fda79419fdda1afaf7e8fc125b670c255ce168704aceffc7433c16d78761b139ef3bd392a7b508597604f6370595#npm:6.5.9"],\
+            ["@babel/runtime", "npm:7.18.0"],\
+            ["@types/final-form", null],\
+            ["@types/react", "npm:18.0.8"],\
+            ["final-form", "npm:4.20.7"],\
+            ["react", "npm:18.1.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/final-form",\
+            "@types/react",\
+            "final-form",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
