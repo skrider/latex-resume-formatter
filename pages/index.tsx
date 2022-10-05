@@ -76,8 +76,8 @@ ${arg_content}
                 renderPdf(Object.keys(values?.content ?? {}).length.toString());
               }}
             />
-            <Card display="flex" flexDir="column" gridRowGap="3">
-              <Text textStyle="h2">Header</Text>
+            <Card>
+              <Text textStyle="h2">Basic Info</Text>
               <AppInput name="content.name" label="Student Name" />
               <AppInput name="content.phone_number" label="Phone Number" />
               <AppInput name="content.linkedin_url" label="Linkedin URL" />
@@ -122,6 +122,10 @@ ${arg_content}
                   </>
                 )}
               />
+            </Card>
+            <Card>
+            <Text textStyle="h2">Education</Text>
+              <AppInput name="content.name" label="Student Name" />
             </Card>
           </Box>
           {pdf ? (

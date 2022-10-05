@@ -11,6 +11,9 @@ const AppTheme = extendTheme({
         boxShadow: "md",
         borderRadius: "xl",
         p: "4",
+        display: "flex",
+        flexDir: "column", 
+        gridRowGap: "3"
       },
     },
   },
